@@ -38,6 +38,7 @@ class _MyAppState extends State<Playlist> {
  
       ConcatenatingAudioSource(
       children: playlist.map((item) => AudioSource.uri(Uri.parse('asset:///${item.soundpath}'))).toList(), 
+      //children: playlist.map((item) => AudioSource.uri(Uri.file(item.soundpath, windows: true))).toList())
       ),
     );
     } catch (e) {
